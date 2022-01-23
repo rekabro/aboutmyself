@@ -1,0 +1,73 @@
+/**
+ * OVERVIEW
+ *
+ * This project is separated to the following style sheets:
+ *
+ * normalize.min.css....CSS reset.
+ * base.css.............Global rules and helpers.
+ * layout.css...........CSS rules that control the layout of the page.
+ * components.css.......Own CSS for the components that build up the page.
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Variables............Globally-available variables.
+ * Box-sizing...........Better default `box-sizing`.
+ * Margins..............Top and bottom margins global values.
+ *
+ * BASE STYLES
+ * Headings.............H1-H2 styles.
+ * Base font............Base font style.
+ *
+ */
+
+/* === SETTINGS === */
+
+/* === Variables === */
+
+
+/* === Box-sizing === */
+
+* { box-sizing: border-box;
+}
+
+
+
+/* === Margins === */
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr,
+img {
+    margin-bottom: 1rem;
+}
+
+
+
+/* === BASE STYLES === */
+
+
+/* === Headings === */
+
+h1, h2, figcaption {
+    font-family: 'Great Vibes', cursive;
+   }
+
+
+
+/* === Base font === */
+
+
+.container {
+    
+    font-family: 'Indie Flower', sans-serif;
+    background-color: rgb(7, 121, 136);
+    font-size:   1.125rem;
+    padding: 1.5em;
+    width:       100%;
+
+}

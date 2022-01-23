@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+}
+
+header {
+    display: flex;
+    margin: 1em auto;
+}
+
+header div {
+    width: 33%;
+}
