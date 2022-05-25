@@ -68,6 +68,7 @@ h1, h2, figcaption {
     background-color: rgb(7, 121, 136);
     font-size:   1.125rem;
     padding: 1.5em;
-    width:       100%;
+    width: 100vw;
+    height: 100vh;
 
 }
