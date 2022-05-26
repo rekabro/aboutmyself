@@ -5,7 +5,7 @@
 .profile-div {
     border: 2px solid black;
     padding: 1em;
-    width: 19em;
+    width: 25em;
     text-align: center;
 }
 
@@ -15,10 +15,11 @@
 
 .icons {
     padding: 1em;
+    margin-left: 20em;
+    height: 3em;
 }
 
 .intro-div {
     padding: 1em;
     text-align: center;
-    
 }
