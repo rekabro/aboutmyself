@@ -3,14 +3,6 @@
 
 /* Show icon-related info-spans */
 
-$(".icons1").hover(function(){
-    $(".hidden1").show();
-  },
-  function(){
-    $(".hidden1").hide();
-  });
-  
-
 $(".icons2").hover(function(){
     $(".hidden2").show();
   },
@@ -28,3 +20,12 @@ function(){
     );
 
   
+    $(".icons4").hover(function(){
+      $(".hidden4").show();
+  },
+  function(){
+      $(".hidden4").hide();
+  }
+      );
+  
+    

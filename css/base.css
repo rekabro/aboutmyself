@@ -19,8 +19,6 @@
  * Margins..............Top and bottom margins global values.
  *
  * BASE STYLES
- * Headings.............H1-H2 styles.
- * Base font............Base font style.
  *
  */
 
@@ -51,24 +49,46 @@ img {
 /* === BASE STYLES === */
 
 
-/* === Headings === */
 
-h1, h2, figcaption {
-    font-family: 'Great Vibes', cursive;
-   }
+body {
+    font-family: "Futura", "Jost", sans-serif;
+    margin: 0;
+  }
 
+p {
+    font-family:  "Playfair Display", serif;
+    font-style:   italic;
+    line-height:  1.8rem;
+    font-size:    1rem;
+    word-spacing: 0.2rem;
+  }
 
+h1, h2 {
+    text-transform: lowercase;
+    font-weight:    700;
+  }
 
-/* === Base font === */
+h1 {
+    font-size: 2rem;
+    margin:    0;
+  }
 
+h2 {
+    font-size:   5rem;
+    line-height: 8rem;
+    margin:      1.4rem;
+  }
 
-.container {
-    
-    font-family: 'Indie Flower', sans-serif;
-    background-color: rgb(7, 121, 136);
-    font-size:   1.125rem;
-    padding: 1.5em;
-    width: 100vw;
-    height: 100vh;
+h3 {
+    margin: 0px 0 20px 0;
+  }
 
-}
+a {
+    display:         inline-block;
+    text-decoration: none;
+    font-weight:     500;
+    letter-spacing:  0.05rem;
+    margin:          40px 20px;
+    color:           #000000;
+  }
+

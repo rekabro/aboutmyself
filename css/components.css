@@ -1,25 +1,568 @@
-#profile-pic {
-    width: 15em;
+
+
+/* colour palette:
+------------------------------------
+
+light blue #86d4d3 - rgb(134,212,211)
+turquise #2da49b - rgb(45,164,155)
+dark green #10645b - rgb(16,100,91)
+dark blue #09484d - rgb(9,72,77)
+*/ 
+
+
+/* --- NAV SECTION --- */
+
+.name {
+  margin:   3vh 2vw 0 7vw;
+  position: fixed;
 }
 
-.profile-div {
-    border: 2px solid black;
-    padding: 1em;
-    width: 25em;
-    text-align: center;
+nav {
+  position:         fixed;
+  height:           12vh;
+  width:            100%;
+  top:              0;
+  background-color: #ffffff;
+  border-bottom:    4px solid #09484d;
+  z-index:          1;
 }
 
-.hidden-span {
+.main-menu {
+  width:           76%;
+  margin:          0 0 0 1em;
+  display:         flex;
+  flex-wrap:       wrap;
+  justify-content: space-between;
+}
+
+.menu-toggle, .menu-close {
+  display: none;
+}
+
+nav .main-menu .nav_links {
+  position:    relative;
+  height:      100%;
+}
+
+nav .main-menu .nav_links ul {
+  list-style:  none;
+  display:     flex;
+  margin-left: 40vw;
+}
+
+nav .main-menu .nav_links ul a {
+  margin:    1.1em 3vw 5em 0;
+  font-size: 1.2em;
+}
+
+nav .main-menu .nav_links ul a:hover {
+  border-bottom: 1px solid #000000;
+}
+
+nav .main-menu .nav_logo {
+  width:               3rem;
+  height:              3rem;
+  margin:              1.4rem 0 0 1.5rem;
+  background-image:    url("/images/spiral.jpg");
+  background-size:     contain;
+  background-repeat:   no-repeat;
+  background-position: left;
+}
+
+
+@media only screen and (max-width: 770px) {
+  nav {
+    height:     auto;
+  }
+
+  nav .main-menu {
+    width: 100%;
+  }
+
+
+  nav .main-menu .menu-toggle {
+    display: inline-block;
+    padding: 12px 5px;
+    line-height: 2rem;
+    font-size: 2rem;
+    color: #000000;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    margin: 0;
+  }
+
+  nav .main-menu .menu-toggle:hover,
+  nav .main-menu .menu-toggle:focus {
+    color: #09484d;
+  }
+
+  nav .main-menu .nav_logo {
+    position: absolute;
+    left: -0.5em;
+    top: 0.6em;
+    width: 2em;
+    height: 2em;
+  }
+
+  .name {
+    margin: 1.2em 0 0 4em;
+    font-size: 1em;
+  }
+
+  nav .main-menu .nav_links {
+    position: fixed;
     display: none;
+    right: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: right 2s ease, box-shadow 2s ease;
+    -webkit-transition: right 2s ease, box-shadow 2s ease;
+    -moz-transition: right 2s ease, box-shadow 2s ease;
+    z-index: 999;
+  }
+  nav .main-menu .nav_links:target {
+    display: block;
+    right: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  }
+  nav .main-menu .nav_links:target .menu-close {
+    z-index: 1001;
+  }
+  nav .main-menu .nav_links:target ul {
+    position: relative;
+    z-index: 1000;
+  }
+  nav .main-menu .nav_links:target + .backdrop {
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #094d0c(56, 55, 161, 0.8);
+    cursor: default;
+    margin: 0;
+  }
+  nav .main-menu .nav_links ul {
+    display: block;
+    margin: 0;
+    padding: 2.5rem 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+    min-height: 100%;
+    width: 200px;
+    background: #fff;
+  }
+  nav .main-menu .nav_links li {
+    border-top: 1px solid #000;
+    display: list-item;
+  }
+  nav .main-menu .nav_links li a {
+    margin: 0;
+    font-size: 1rem;
+    width: auto;
+    display: block;
+    padding: 1.2rem 15px;
+    line-height: 1rem;
+  }
+  nav .main-menu .nav_links li a:hover,
+  nav .main-menu .nav_links li a:focus {
+    background: #dbdbdb;
+  }
+  nav .main-menu .nav_links .menu-close {
+    font-size: 1.5em;
+    margin: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@supports (position: fixed) {
+  .nav_links,
+  .nav_links:target + .backdrop {
+    position: fixed;
+  }
 }
 
-.icons {
-    padding: 1em;
-    margin-left: 20em;
-    height: 3em;
+@media only screen and (max-width: 990px) {
+  
+}
+/* pseudo element to ensure the anchor tag goes to top of section */
+#about::before,
+#portfolio::before,
+#contact::before {
+  display: block;
+  content: " ";
+  margin-top: -120px;
+  height: 120px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.intro-div {
-    padding: 1em;
+/* --- LANDING PAGE SECTION --- */
+
+header {
+  background-image: url(/images/background.jpg);
+  background-size:  cover;
+  height:           auto;
+  padding:          25vh 0 10vh 0;
+  margin:           0 0 20vh 0;
+}
+
+
+header .callout {
+  display:  inline;
+  overflow: auto;
+  margin:   auto;
+}
+
+@keyframes movingText {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+header .callout .callout_left {
+  text-align:         left;
+  animation-name:     movingText;
+  animation-duration: 3s;
+}
+
+header .callout .callout_right {
+  display:            block;
+  text-align:         right;
+  animation-name:     movingText;
+  animation-duration: 3s;
+}
+
+@media only screen and (min-width: 1600px) {
+  header .callout .callout_left {
+    margin-left: 16%;
+  }
+
+  header .callout .callout_right {
+    margin: 0 16% 0 10%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  header {
+    padding: 100px 0 80px 0;
+    margin:  0 0 60px 0;
+  }
+
+  header .callout_left {
+    font-size:   3rem;
+    line-height: 5rem;
+    margin:      10% 0 0 12%;
+  }
+
+  header .callout_left .callout_right {
+    margin: 5% 10% 0 10%;
+  }
+}
+
+.quote {
+  position: relative;
+  top: 25vh;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 1.4em;
+}
+
+@media only screen and (max-width: 770px) {
+.quote {
+  top: 25vh;
+}
+
+.quote-text {
+  font-size: 0.9em;
+}
+
+.quote-name {
+  font-size: 0.7em;
+  margin-bottom: 2em;
+}
+}
+
+
+/* --- ABOUT ME SECTION --- */
+
+
+.about_me_box {
+  display:         flex;
+  flex-wrap:       wrap;
+  justify-content: space-between;
+  margin:          3vw 0 10vh 0;
+  padding-bottom:  20vh;
+}
+
+.about_me_box .about_me {
+  width:       60%;
+  padding-top: 7vh;
+}
+
+.about_me_box p {
+font-style:      normal;
+text-align:      justify;
+text-indent:     2rem;
+}
+
+.about_me_box .img_me_box {
+  margin: 0;
+  width:  33.333%;
+}
+
+.about_me_box .img_me_box .img_me {
+  width:               100%;
+  height:              30rem;
+  background-image:    url("/images/profile.jpg");
+  background-position: center;
+  background-size:     cover;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 770px) {
+  .about_me_box {
+    margin: 2em 2em 6em 2em;
+  }
+
+  .about_me_box .about_me,
+  .about_me_box .img_me_box {
+    width: 100%;
+  }
+
+  .about_me_box .img_me_box .img_me {
+    height: 70vh;
+  }
+}
+
+
+
+ /* --- PORTFOLIO SECTION --- */
+  
+  .my_work_panel {
+    background-color: #dbdbdb;
+  }
+
+  .my_work_panel .portfolio_box {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+    margin:          2em 0 10em 0;
+  }
+
+  .my_work_panel .portfolio_box .box {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    padding:         0;
+    margin:          1em 0;
+    position:        relative;
+  }
+
+  .my_work_panel .portfolio_box .box .box_image {
+    max-height: 100%;
+    max-width:  100%;
+  }
+
+  .my_work_panel .portfolio_box .box .overlay {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    position:        absolute;
+    top:             0;
+    bottom:          0;
+    left:            0;
+    right:           0;
+    height:          100%;
+    width:           100%;
+    opacity:         0;
+    transition:      0.5s ease;
+  }
+
+  .my_work_panel .portfolio_box .box .overlay .overlay_contents {
+    margin:     auto;
+    width:      80%;
     text-align: center;
+  }
+
+  .my_work_panel .portfolio_box .box .overlay .overlay_contents .text {
+    margin-bottom: 2em;
+    font-size:     1.2rem;
+    font-weight:   700;
+    line-height:   1.5rem;
+    transform:     translateY(-30px);
+    transition:    transform 0.5s ease-out;
+  }
+
+
+ .my_work_panel .portfolio_box .box:hover .overlay {
+    opacity: 0.7;
+  }
+
+  .my_work_panel .portfolio_box .box:hover .overlay .overlay_contents .text,
+  .my_work_panel .portfolio_box .box:hover .overlay .overlay_contents .portfolio_link {
+    transform: translateY(0);
+  }
+
+  .my_work_panel .portfolio_box .box:nth-child(3n + 1) .overlay {
+    background-color: #ffe2d1;
+  }
+
+  .my_work_panel .portfolio_box .box:nth-child(3n + 2) .overlay {
+    background-color: hsl(231, 98%, 80%);
+  }
+
+  .my_work_panel .portfolio_box .box:nth-child(3n + 3) .overlay {
+    background-color: #dbdbdb;
+  }
+
+  @media only screen and (max-width: 770px) {
+    .my_work_panel .portfolio_box .box.large_box,
+    .my_work_panel .portfolio_box .box.small_box {
+        width: 100%;
+        height: 40em;
+    }
 }
+
+
+
+/* --- CONTACT SECTION --- */
+
+.container_contact {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+}
+
+.contact_panel {
+  height:           50vh;
+  background-color: #dbdbdb;
+}
+
+.contact_panel h3 {
+  font-size: 1.5em;
+  color: #09484d;
+}
+
+
+  .contact_panel .contact_panel_a .email {
+    padding-bottom: 0.2em;
+    margin-top:     1em;
+    border-bottom:  1px solid #dbdbdb;
+  }
+
+  .contact_panel .contact_panel_a .email:hover {
+      border-bottom: 1px solid #2da49b;
+      color:         #2da49b;
+  }
+  
+  .contact_panel .social_media_box
+ {
+  margin: 0 auto;
+ } 
+
+  .contact_panel .social_media_box a {
+    margin:    0 2rem;
+    font-size: 1.5em;
+    position:  relative;
+  }
+
+  .contact_panel .social_media_box a:hover {
+    color:   #2da49b;
+    position: relative;
+  }
+ 
+  @media only screen and (max-width: 770px) {
+    .contact_panel {
+      height: 50vh;
+      padding-top: 0;
+    }
+    .contact_panel .email {
+      font-size: 0.9rem;
+      margin:    2em 0;
+    }
+  }
+
+  .media-wrap span {
+    position: fixed;
+    margin: 2em -3em 0 0;
+  }
+  
+  .hidden-span {
+      display: none;
+  }
+  
+  
+  /* --- FOOTER SECTION --- */
+  
+  footer {
+    background-color: #32989a;
+    height: 7vh;
+    overflow: auto;
+  }
+  
+  .container_main {
+      margin: auto;
+      width: 76%;
+    
+    }
+    @media only screen and (max-width: 770px) {
+      .container_main {
+        width: 90%;
+      }
+    }
+
+  footer .copyright {
+    font-weight:  200;
+    font-style:   italic;
+    font-family:  "Futura", "Jost", sans-serif;
+    font-size:    0.8rem;
+    float:        left;
+    margin:       2vh auto;
+  }
+
+
+  @media only screen and (max-width: 770px) {
+    footer .copyright {
+      font-size: 0.7rem;
+    }
+    footer .text {
+      margin: 70px 0;
+    }
+  }
+  
+
+  .move_to {
+    float: right;
+    margin: 2vh auto;
+    font-weight: 700;
+  }
+  .move_to:hover {
+    border-bottom: 1px solid #000000;
+  }
+  
+  @media only screen and (max-width: 770px) {
+    .move_to {
+      font-size: 0.8em;
+    }
+  }
+
+
+  

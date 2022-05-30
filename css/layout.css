@@ -1,12 +1,5 @@
-.container {
-    position: relative;
-}
 
-header {
+.social_media_box {
     display: flex;
-    margin: 1em auto;
-}
-
-header div {
-    width: 50%;
+    flex-direction: row;
 }
