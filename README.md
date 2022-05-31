@@ -1,2 +1,2 @@
 # aboutmyself
-A homepage I made for myself :)
+Please check out my portfolio, and get to know me a bit better!
