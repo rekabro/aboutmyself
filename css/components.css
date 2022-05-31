@@ -314,7 +314,7 @@ header .callout .callout_right {
 
 .about_me_box .about_me {
   width:       60%;
-  padding-top: 7vh;
+  padding-top: 4vh;
 }
 
 .about_me_box p {
@@ -350,6 +350,32 @@ text-indent:     2rem;
   .about_me_box .img_me_box .img_me {
     height: 70vh;
   }
+}
+
+.about-more {
+  display:        flex;
+  flex-direction: row;
+  width:          80%;
+  position:       relative;
+ 
+}
+
+
+
+.btn {
+  width: 10em;
+  height: 2em;
+  border: 1px dashed #10645b;
+  border-radius: 15px;
+  margin: 1em;
+  font-size: 1em;
+  font-family:  "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  color: #10645b;
+  background-color: #dbdbdb;
 }
 
 
