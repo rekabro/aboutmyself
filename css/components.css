@@ -215,6 +215,7 @@ header {
   background-image: url(/images/background.jpg);
   background-size:  cover;
   height:           auto;
+  width:            100%;
   padding:          25vh 0 10vh 0;
   margin:           0 0 20vh 0;
 }

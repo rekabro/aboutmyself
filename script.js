@@ -1,5 +1,21 @@
 /* CONTENTS */
 
+document.getElementById("skills-button").onclick = function () {
+    location.href = "pages/skills.html";
+};
+
+document.getElementById("education-button").onclick = function () {
+    location.href = "pages/education.html";
+};
+
+document.getElementById("design-button").onclick = function () {
+    location.href = "pages/design.html";
+};
+
+document.getElementById("style-button").onclick = function () {
+    location.href = "https://www.pinterest.co.uk/rnegyzet";
+};
+
 
 /* Show icon-related info-spans */
 
