@@ -1,0 +1,16 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(#86d4d3, #2da49b, #09484d);
+    position: absolute;
+    top: 0;
+}
+
+/* colour palette:
+------------------------------------
+
+light blue #86d4d3 - rgb(134,212,211)
+turquise #2da49b - rgb(45,164,155)
+dark green #10645b - rgb(16,100,91)
+dark blue #09484d - rgb(9,72,77)
+*/ 

@@ -13,13 +13,13 @@ dark blue #09484d - rgb(9,72,77)
 /* --- NAV SECTION --- */
 
 .name {
-  margin:   3vh 2vw 0 7vw;
+  margin:   1.6em 1em 0 7em;
   position: fixed;
 }
 
 nav {
   position:         fixed;
-  height:           12vh;
+  height:           6em;
   width:            100%;
   top:              0;
   background-color: #ffffff;
@@ -69,6 +69,10 @@ nav .main-menu .nav_logo {
   background-position: left;
 }
 
+@media only screen and (max-width: 1300px) {
+.main-menu { width: 90%;
+}
+}
 
 @media only screen and (max-width: 770px) {
   nav {
@@ -315,7 +319,7 @@ header .callout .callout_right {
 
 .about_me_box .about_me {
   width:       60%;
-  padding-top: 4vh;
+  padding-top: 2vh;
 }
 
 .about_me_box p {
@@ -368,7 +372,7 @@ text-indent:     2rem;
   height: 2em;
   border: 1px dashed #10645b;
   border-radius: 15px;
-  margin: 1em;
+  margin: 1em 2em 1em 0;
   font-size: 1em;
   font-family:  "Playfair Display", serif;
   font-weight: 700;
