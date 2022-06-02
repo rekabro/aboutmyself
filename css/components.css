@@ -377,7 +377,7 @@ text-indent:     2rem;
 
 @media only screen and (max-width: 870px) {
   .about_me_box {
-    margin: 2em; 2em 6em 2em;
+    margin: 2em 2em 6em 2em;
   }
 
   .about_me_box .about_me,

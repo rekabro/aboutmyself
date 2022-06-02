@@ -9,6 +9,7 @@
 h2 {
     font-size: 2.5em;
     margin-left: 10vw;
+    margin-bottom: 0;
 }
 
 .text-wrap {
@@ -17,5 +18,26 @@ h2 {
 }
 
 h3 {
-    font-size: 1.7em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+a {
+    margin-top: 1em;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+a:hover {
+    color: rgb(2, 2, 27);
+    border-bottom: 1px solid rgb(1, 1, 36);
+}
+
+.video-wrap {
+    margin: 1em 0 0 15vw;
 }
