@@ -21,6 +21,7 @@ nav {
   position:         fixed;
   height:           6em;
   width:            100%;
+  max-width:        100vw;
   top:              0;
   background-color: #ffffff;
   border-bottom:    4px solid #09484d;
@@ -75,12 +76,9 @@ nav .main-menu .nav_logo {
 }
 
 @media only screen and (max-width: 870px) {
-
- 
   nav .main-menu {
     width: 100%;
   }
-
 
   nav .main-menu .menu-toggle {
     display: inline-block;
@@ -196,8 +194,11 @@ nav .main-menu .nav_logo {
   }
 }
 
-@media only screen and (max-width: 990px) {
-  
+@media only screen and (max-width: 560px) {
+.name {
+  font-size: 0.5em;
+  margin: 3.2em 0 0 6.5em;
+  }
 }
 /* pseudo element to ensure the anchor tag goes to top of section */
 #about::before,
@@ -218,6 +219,7 @@ header {
   background-size:  cover;
   height:           auto;
   width:            100%;
+  min-width:        100vw;
   padding:          25vh 0 20vh 0;
   margin:           0 0 2vh 0;
 }
@@ -343,9 +345,9 @@ text-indent:     2rem;
 .about-more {
   display:        flex;
   flex-direction: row;
+  flex-wrap:      wrap;
   width:          80%;
   position:       relative;
- 
 }
 
 .btn {
@@ -398,6 +400,20 @@ text-indent:     2rem;
   }
 }
 
+@media only screen and (max-width: 560px) {
+  .container-main {
+    max-width: 100vw;
+  }
+  .about_me_box {
+    margin: 2em 1em 6em 1em;
+  }
+
+  .btn {
+    margin: 1em 1em 1em 0;
+    width: 8em;
+  }
+  
+}
 
 /* --- PORTFOLIO SECTION --- */
 
@@ -439,6 +455,7 @@ text-indent:     2rem;
     width:           100%;
     opacity:         0;
     transition:      0.5s ease;
+    overflow-y:    auto;
   }
 
   .my_work_panel .portfolio_box .box .overlay .overlay_contents {
