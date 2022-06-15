@@ -5,8 +5,7 @@
  *
  * normalize.min.css....CSS reset.
  * base.css.............Global rules and helpers.
- * layout.css...........CSS rules that control the layout of the page.
- * components.css.......Own CSS for the components that build up the page.
+ * components.css.......Layouts and own CSS for the components that build up the page.
  */
 
 
@@ -14,7 +13,6 @@
  * CONTENTS
  *
  * SETTINGS
- * Variables............Globally-available variables.
  * Box-sizing...........Better default `box-sizing`.
  * Margins..............Top and bottom margins global values.
  *
@@ -23,9 +21,6 @@
  */
 
 /* === SETTINGS === */
-
-/* === Variables === */
-
 
 /* === Box-sizing === */
 
@@ -48,13 +43,11 @@ img {
 
 /* === BASE STYLES === */
 
-
-
 body {
     font-family: "Futura", "Jost", sans-serif;
-    margin: 0;
-    position: absolute;
-    width: 100%;
+    margin:      0;
+    position:    absolute;
+    width:       100%;
   }
 
 p {

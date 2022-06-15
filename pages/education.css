@@ -1,7 +1,7 @@
 .main-container {
     width: 100vw;
     min-height: 100vh;
-    background-image: -webkit-linear-gradient( #10645b, #86d4d3, #2da49b);
+    background-image: -webkit-linear-gradient(#2da49b, #86d4d3, #2da49b);
     position: absolute;
     top: 0;
 }
@@ -19,3 +19,17 @@ h2 {
 h3 {
     font-size: 1.7em;
 }
+
+.icon {
+    font-size: 2em;
+    padding: 1em 0.5em;
+    position: fixed;
+    left: 0;
+    top: -1.3em;
+}
+
+.arrow {
+    font-size: 0.5em;
+    padding-right: 0.2em;
+}
+
