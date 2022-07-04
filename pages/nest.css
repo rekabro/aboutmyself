@@ -1,40 +1,40 @@
 .main-container {
-    width: 100vw;
+    width:      100vw;
     min-height: 100vh;
-    background-image: -webkit-linear-gradient( #10645b, #86d4d3, #2da49b);
-    position: absolute;
-    top: 0;
+    background: #b9f1f1;
+    position:   absolute;
+    top:        0;
 }
 
 h2 {
-    font-size: 2.5em;
-    margin-left: 10vw;
+    font-size:     2.5em;
+    margin-left:   10vw;
     margin-bottom: 0;
 }
 
 .text-wrap {
-    width: 70%;
+    width:  70%;
     margin: auto;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size:  1.5em;
     text-align: center;
 }
 
 p {
-    text-align: center;
+    text-align:    center;
     margin-bottom: 2em;
 }
 
 a {
-    margin-top: 1em;
-    color: blue;
-    border-bottom: 1px solid blue;
+    margin-top:    1em;
+    color:         black;
+    border-bottom: 1px solid black;
 }
 
 a:hover {
-    color: rgb(2, 2, 27);
+    color:        rgb(2, 2, 27);
     border-bottom: 1px solid rgb(1, 1, 36);
 }
 
@@ -44,13 +44,13 @@ a:hover {
 
 .icon {
     font-size: 2em;
-    padding: 1em 0.5em;
-    position: fixed;
-    left: 0;
-    top: -1.3em;
+    padding:   1em 0.5em;
+    position:  fixed;
+    left:      0;
+    top:       -1.3em;
 }
 
 .arrow {
-    font-size: 0.5em;
+    font-size:     0.5em;
     padding-right: 0.2em;
 }
