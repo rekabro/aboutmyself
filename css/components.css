@@ -434,13 +434,13 @@ text-indent:     2rem;
     justify-content: center;
     align-items:     center;
     padding:         0;
-    margin:          1em 0;
+    margin:          1em auto;
     position:        relative;
   }
 
   .my_work_panel .portfolio_box .box .box_image {
     max-height: 100%;
-    max-width:  100%;
+    max-width:  90%;
   }
 
   .my_work_panel .portfolio_box .box .overlay {

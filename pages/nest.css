@@ -20,6 +20,7 @@ h2 {
 h3 {
     font-size:  1.5em;
     text-align: center;
+    margin-top: 2em;
 }
 
 p {
@@ -53,4 +54,19 @@ a:hover {
 .arrow {
     font-size:     0.5em;
     padding-right: 0.2em;
+}
+
+.nest-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.nest-gallery img {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.nest-gallery img:hover {
+    max-width: 100%;
 }
