@@ -60,7 +60,6 @@ p {
   }
 
 h1, h2 {
-    text-transform: lowercase;
     font-weight:    700;
   }
 
@@ -71,8 +70,8 @@ h1 {
 
 h2 {
     font-size:   5rem;
-    line-height: 8rem;
-    margin:      1.4rem;
+    line-height: 7rem;
+    margin:      1rem;
   }
 
 h3 {

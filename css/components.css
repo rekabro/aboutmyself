@@ -196,10 +196,12 @@ nav .main-menu .nav_logo {
 
 @media only screen and (max-width: 560px) {
 .name {
-  font-size: 0.5em;
-  margin: 3.2em 0 0 6.5em;
+  font-size: 0.4em;
+  margin: 3.2em 0 0 7em;
   }
 }
+
+
 /* pseudo element to ensure the anchor tag goes to top of section */
 #about::before,
 #portfolio::before,
@@ -212,6 +214,8 @@ nav .main-menu .nav_logo {
   pointer-events: none;
 }
 
+
+
 /* --- LANDING PAGE SECTION --- */
 
 header {
@@ -222,6 +226,10 @@ header {
   min-width:        100vw;
   padding:          25vh 0 20vh 0;
   margin:           0 0 2vh 0;
+}
+
+header .callout-cover {
+  width: 95%;
 }
 
 header .callout {
@@ -243,6 +251,9 @@ header .callout .callout_left {
   text-align:         left;
   animation-name:     movingText;
   animation-duration: 3s;
+  font-size:          3em;
+  font-style:         italic;
+  text-shadow:        2px 2px 5px white;
 }
 
 header .callout .callout_right {
@@ -252,55 +263,63 @@ header .callout .callout_right {
   animation-duration: 3s;
 }
 
-@media only screen and (min-width: 1600px) {
+.quote {
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 1200px) {
   header .callout .callout_left {
-    margin-left: 16%;
+    margin-left: 6%;
+    font-size:   2.1em;
   }
 
   header .callout .callout_right {
-    margin: 0 16% 0 10%;
+    margin: 0 8% 0 8%;
   }
 }
 
-@media only screen and (max-width: 770px) {
-  header {
-    padding: 100px 0 80px 0;
-    margin:  0 0 60px 0;
+@media only screen and (max-width: 992px) {
+  header .callout .callout_left {
+    margin-left: 4%;
+    font-size:   1.8em;
   }
+
+  header .callout .callout_right {
+    margin: 0 4% 0 4%;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  header .callout .callout_left {
+    margin-left: 5%;
+    line-height: 2rem;
+    margin-top:  2em;
+    font-size:   1.6em;
+    text-align:  center;
+  }
+
+  header .callout .callout_right {
+    margin:     5% 5% 0 5%;
+    text-align: center;
+  }
+  .quote-name {
+    font-size: 0.5em;
+    text-align:    center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
 
   header .callout_left {
-    font-size:   3rem;
-    line-height: 5rem;
-    margin:      10% 0 0 12%;
+    font-size:   1em;
+    line-height: 3rem;
+    margin-top:  1em; 
   }
-
-  header .callout_left .callout_right {
-    margin: 5% 10% 0 10%;
-  }
-}
-
-.quote {
-  text-align: center;
-  margin-bottom: 5em;
-}
-
-.quote-text {
-  font-size: 1.4em;
-}
-
-@media only screen and (max-width: 770px) {
-
-  .quote {
-    margin-bottom: 0;
-  }
-
-.quote-text {
-  font-size: 1em;
-}
 
 .quote-name {
-  font-size: 0.7em;
-  margin-bottom: 2em;
+  font-size:     0.5em;
 }
 }
 
